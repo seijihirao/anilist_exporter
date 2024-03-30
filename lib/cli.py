@@ -19,7 +19,7 @@ def main():
                         help='Sets anilist username to export.')
     parser.add_argument('-e', '--exporter', 
                         action='store',
-                        help='Exports to letterbox csv format.')
+                        help='Selects exporter script file from lib/exporters.')
 
     args = parser.parse_args()
 

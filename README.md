@@ -25,5 +25,5 @@ $ python main.py -u seijihirao -e letterboxd > output.csv
 
 To create a new exporter, just create a new file inside the dir [lib/exporters](./lib/exporters/).
 
-This file must contain an `Exporter` class with the functions `export_meta()` (to print before) and `export_media(media)` (to print the actual media),
+This file must contain an `Exporter` class with the functions `export_meta()` (to return header line) and `export_media(media)` (to return each line),
 see [letterboxd file](./lib/exporters/letterboxd.py)
