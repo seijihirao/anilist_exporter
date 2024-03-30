@@ -35,7 +35,7 @@ class AnilistExporter:
 
     def export(self, exporter):
         self.variables['page'] = 0
-        exporter.export_meta()
+        print(exporter.export_meta())
         medialist = [None]
         while len(medialist) != 0:
             self.variables['page'] += 1
@@ -44,7 +44,7 @@ class AnilistExporter:
             if response.status_code == 200:
                 medialist = json.loads(response.content)['data']['Page']['mediaList']
                 for media in medialist:
-                    exporter.export_media(media)
+                    print(exporter.export_media(media))
             else:
                 print(response.content)
                 break

@@ -2,7 +2,7 @@ from datetime import datetime
 
 class Exporter:
     def export_meta(self):
-        print('Title,Rating10,WatchedDate,Rewatch')
+        return 'Title,Rating10,WatchedDate,Rewatch'
 
     def export_media(self, media):
         title = media['media']['title']['english']
@@ -11,5 +11,5 @@ class Exporter:
         score = round(media['score'])
         createdAt = datetime.fromtimestamp(media['createdAt']).strftime('%Y-%m-%d')
         repeat = media['repeat']
-        print(f'{title},{score},{createdAt},{repeat}')
+        return f'{title},{score},{createdAt},{repeat}'
 
